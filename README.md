@@ -18,7 +18,10 @@ The goal was to go beyond simply hosting a static site and instead design a secu
 
 - All frontend deployments are automated using GitHub Actions for continuous integration and delivery.
 
-**Terraform was used to provision core backend infrastructure components including:**
+---
+
+# Terraform was used to provision core backend infrastructure components including:
+
 - The S3 bucket
 - The Lambda function
 - The DynamoDB table
