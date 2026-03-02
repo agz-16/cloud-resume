@@ -1,0 +1,230 @@
+/* =========================
+   INTRO / HERO STYLES
+   ========================= */
+
+.intro-header {
+  margin-bottom: 1.5rem;
+}
+
+.intro-subtitle {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+}
+
+#typed {
+  font-weight: 700;
+  margin-left: 0.25rem;
+  color: #1f6feb; /* subtle tech blue */
+}
+
+/* Cursor styling */
+.typed-cursor {
+  font-size: 1.6rem;
+  color: #1f6feb;
+}
+/* =========================
+   INTRO FOLDERS (Accordion)
+   ========================= */
+
+:root{
+  --accent-blue: #1f6feb;     /* match typed text */
+  --accent-blue-light: #dbeafe; /* light blue when open */
+  --text-on-blue: #ffffff;    /* readable on blue */
+  --text-on-light: #0f172a;   /* readable on light blue */
+}
+/* =========================
+   INTRO PROFILE PHOTO
+   ========================= */
+
+.intro-photo{
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid var(--accent-blue); /* same blue as folders */
+
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+}
+
+
+.intro-folders{
+  margin-top: 1.5rem;
+  max-width: 65ch; /* matches your intro text width */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Remove default triangle marker in some browsers */
+.folder summary::-webkit-details-marker{
+  display: none;
+}
+
+/* The clickable "tab" */
+.folder-summary{
+  /* match entry-title sizing (desktop) */
+  font-weight: 800;
+  font-size: 1.65rem;
+  line-height: 1.25;
+
+  cursor: pointer;
+  user-select: none;
+
+  background: var(--accent-blue);
+  color: var(--text-on-blue);
+
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 0 0.75rem 0;
+}
+
+/* Add a chevron indicator */
+.folder-summary::after{
+  content: "▸";
+  font-size: 1.2em;
+  transform: translateY(-1px);
+  transition: transform 180ms ease;
+}
+
+/* When open: change background + rotate chevron */
+.folder[open] .folder-summary{
+  background: var(--accent-blue-light);
+  color: var(--text-on-light);
+}
+
+.folder[open] .folder-summary::after{
+  transform: rotate(90deg);
+}
+
+/* The collapsible content panel */
+.folder-body{
+  background: var(--accent-blue-light);
+  color: var(--text-on-light);
+
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+
+  margin: -0.35rem 0 1.1rem 0;
+}
+
+/* Typography control */
+
+/* Center intro content block but keep text left-aligned */
+#top .col-8{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#top header,
+#top .intro-text{
+  text-align: left;
+}
+#top .intro-folders{
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+
+/* MOBILE: match entry-title sizing + body sizing */
+@media (max-width: 640px){
+  
+  .intro-photo{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1.25rem;
+  }
+
+    .folder-summary{
+    font-size: 1.25rem;   /* match your mobile entry-title */
+    line-height: 1.65;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .folder-body{
+    padding: 0.8rem 0.9rem;
+  }
+}
+
+/* =========================================================
+   FINAL authority for dropdown body text
+   ========================================================= */
+#top .intro-folders .folder-body .folder-p{
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: left;
+}
+
+@media (max-width: 640px){
+  #top .intro-folders .folder-body .folder-p{
+    font-size: 1.05rem;
+    line-height: 1.65;
+    text-align: left;
+  }
+}
+
+/* ===== FORCE remove top space above intro ===== */
+#top.wrapper{
+  padding-top: 3rem !important;
+}
+
+#top header{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#top .intro-title{
+  margin-top: 0 !important;
+  text-align: center;
+}
+
+/* =========================
+   CONGRATS SECTION – FINAL AUTHORITY
+   ========================= */
+
+/* Desktop */
+#top .viewer-text.intro-subtitle{
+  font-size: 1.6rem !important;
+}
+
+#top .reload-text.folder-p{
+  font-size: 1.35rem !important;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  #top .viewer-text.intro-subtitle{
+    font-size: 1.15rem !important;
+    line-height: 1.5;
+  }
+
+  #top .reload-text.folder-p{
+    font-size: 1rem !important;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+
+
+

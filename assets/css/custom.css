@@ -1,0 +1,215 @@
+/* =========================================================
+   CORE: keep template layout + add consistent inner spacing
+   ========================================================= */
+
+/* Make sure our resume content doesn't touch the edges */
+.wrapper .container .resume-section{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Typography helpers */
+.intro-title{
+  font-size: 2.4rem;        /* strong but not overpowering */
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em; /* subtle polish */
+  color: #222;
+}
+.intro-text{
+  max-width: 65ch;
+  color: #222;        /* same readable black as rest of resume */
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+#top .intro-text{
+  color: #222;
+  font-size: 1.35rem;
+  line-height: 1.65;
+  font-weight: 400;
+  max-width: 65ch;
+}
+
+/* Section H1 */
+.section-title{
+  font-size: 2.6rem;   /* ~30% bigger than 2rem */
+  margin: 0 0 3rem 0;
+  text-align: left;
+}
+
+
+/* Section H2 / entry titles */
+.entry-title{
+  font-weight: 800;
+  font-size: 1.65rem;
+  text-align: left;
+}
+
+/* Normal text */
+.body-text{
+  font-weight: 400;
+  font-size: 1.35rem;   /* bigger for desktop */
+  line-height: 1.7;
+  text-align: left;
+}
+
+
+/* Work title (italic role) */
+.work-title{
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.35rem;  /* match bullets (same as .body-text) */
+  line-height: 1.65;
+}
+
+
+/* Right-side work info */
+.work-meta{
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 0.25rem; /* tiny breathing room */
+}
+
+
+
+/* two-col rows */
+.two-col{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .25rem;
+}
+
+/* spacing between company line and role line */
+.entry-subline{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* bullets */
+.bullet-list{
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+.bullet-list li{ margin-bottom: 0.6rem; }
+
+/* Skill lines */
+.skills-block .skill-line{
+  margin: 0 0 1rem 0;
+}
+
+/* =========================================================
+   IMPORTANT: Bold labels (Certifications:, Clubs:, etc.)
+   Some templates style spans/strong in ways that can win.
+   We scope + force weight only for labels.
+   ========================================================= */
+.resume-section .label{
+  font-weight: 700 !important;
+}
+.resume-section .value{
+  font-weight: 400;
+}
+
+/* Links */
+.resume-section a{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Darker, readable text */
+.resume-section,
+.resume-section p,
+.resume-section li,
+.resume-section div{
+  color: #222;
+}
+
+/* =========================================================
+   DIFFERENTIATE Projects vs Additional
+   ========================================================= */
+
+/* Projects look like "cards" */
+.resume-section--projects .project-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Additional Info is a clean list (no cards) */
+.additional-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.additional-list li{
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+.additional-list li:last-child{
+  border-bottom: none;
+}
+
+/* =========================================================
+   MOBILE: keep it readable, collapse right column
+   ========================================================= */
+@media (max-width: 640px){
+    
+    .intro-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+    .body-text{
+    font-size: 1.05rem;   /* keep mobile comfortable */
+    line-height: 1.65;
+  }
+    .entry-title{
+    font-size: 1.25rem;   /* match mobile body text */
+    line-height: 1.65;
+  }
+
+  .work-title{
+    font-size: 1.05rem;   /* match mobile body text */
+    line-height: 1.65;
+  }
+  .wrapper .container .resume-section{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-title{ font-size: 2.15rem; } /* keep hierarchy on mobile */
+
+  .two-col{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* Hide only locations on mobile */
+  .work-location{
+    display: none;
+  }
+  #top .container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Ensure intro text aligns + matches reading width */
+  #top .intro-text{
+    max-width: 65ch;
+  }
+
+  /* Keep dates on mobile, left aligned */
+  .work-dates{
+    display: block;
+    text-align: left;
+    white-space: normal;
+    padding-right: 0;
+  }
+  .bullet-list{ padding-left: 1.1rem; }
+}
+
+
+
