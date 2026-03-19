@@ -196,7 +196,7 @@
 
             <p class="skill-line body-text">
               <span class="label">Other:</span>
-              <span class="value">Azure, Google Cloud, GitHub, Zendesk (CRM), Linux (Ubuntu, Kali), Windows (CMD, PowerShell), ClickUp, Notion</span>
+              <span class="value">Docker, Kubernetes, Azure, Google Cloud, GitHub, CI/CD, YAML, Linux (Ubuntu, Kali), Zendesk (CRM), Windows (CMD, PowerShell), ClickUp, Notion</span>
             </p>
           </div>
         </section>
@@ -224,12 +224,15 @@
             </div>
 
             <ul class="bullet-list body-text">
-              <li>Implemented region-based transaction routing to improve payment approval rates across $5M+ monthly revenue.</li>
-              <li>Configured DNS records to support 6 global storefronts, SSL validation, &amp; email authentication.</li>
-              <li>Improved page load performance using Amazon S3 for static asset hosting &amp; a CDN to serve 1M+ monthly visitors.</li>
-              <li>Applied IAM principles across ecommerce platforms to manage user roles &amp; permissions for 100+ employees.</li>
-              <li>Integrated event-based workflows with ClickUp &amp; Slack APIs to automate task-driven notifications &amp; follow-ups.</li>
-              <li>Designed payment dispute &amp; refund workflows to maintain dispute rates below 1% across $5M+ monthly volume.</li>
+          <li>Built a serverless image conversion API using API Gateway, Lambda, &amp; S3 to auto-convert uploads to WebP at scale.</li>
+          <li>Architected a tiered S3 backup system with versioning and lifecycle policies to auto-archive cold data to S3 Glacier.</li>
+          <li>Migrated static assets to S3 with CloudFront as CDN, reducing page load times for 1M+ monthly visitors.</li>
+          <li>Designed multi-processor payment routing logic, improving approval rates by 4% across $5M+ monthly revenue.</li>
+          <li>Created a CI/CD workflow with GitHub Actions to automatically deploy website updates to Shopify on every push.</li>
+          <li>Configured DNS records to support 6 global storefronts, SSL validation, &amp; email authentication.</li>
+          <li>Applied IAM principles across ecommerce platforms to manage user roles &amp; permissions for 100+ employees.</li>
+          <li>Integrated event-based workflows with ClickUp &amp; Slack APIs to automate task-driven notifications &amp; follow-ups.</li>
+          <li>Designed payment dispute &amp; refund workflows to maintain dispute rates below 1% across $5M+ monthly volume.</li><li>Implemented region-based transaction routing to improve payment approval rates across $5M+ monthly revenue.</li>
             </ul>
           </div>
 
@@ -251,6 +254,7 @@
               <li>Managed geo-based traffic allocation to optimize landing page performance across 8 international regions.</li>
               <li>Developed lightweight Python web scraping scripts to extract market research data from Reddit communities.</li>
               <li>Implemented address auto-completion with Google Maps API to reduce form errors &amp; improve conversion rates.</li>
+              <li>Automated ad creative pipeline with Python via AssemblyAI &amp; Google Drive APIs to transcribe, filter, &amp; organize.</li>
             </ul>
           </div>
 
@@ -267,9 +271,8 @@
 
             <ul class="bullet-list body-text">
               <li>Collaborated weekly with senior cloud consultants using agile development to architect scalable cloud solutions.</li>
-              <li>Utilized AWS CDK (TypeScript) to deploy Infrastructure as Code (IaC) for an Artificial Intelligence (AI) project.</li>
-              <li>Integrated serverless architecture with AWS Lambda, DynamoDB &amp; leveraged API gateway for API management.</li>
-              <li>Automated API documentation using the Swagger API &amp; integrated it within the current GitLab CI/CD pipelines.</li>
+              <li>Deployed IaC (CDK) for a serverless AI tool, provisioning Lambda, S3, DynamoDB, & API Gateway to expose internal data via REST API with least-privilege IAM policies.</li>
+              <li>Automated API documentation generation with Swagger, integrating it directly into GitLab CI/CD pipelines.</li>
             </ul>
           </div>
 
@@ -285,9 +288,10 @@
             </div>
 
             <ul class="bullet-list body-text">
-              <li>Safeguarded assets valued at $100,000+ by using AWS (EC2, S3, EBS, Backup) &amp; Veeam to automate daily backups.</li>
-              <li>Migrated a Cisco Cybervision virtual machine to Azure, resulting in a $250,000 deal &amp; a 30% market expansion.</li>
+              <li>Configured automated daily backups for a live EC2 instance using AWS Backup, EBS snapshots, S3, & Veeam for dual-layer cloud and on-premises redundancy, safeguarding assets valued at $100,000+.</li>
+              <li>Migrated Cisco Cybervision from VirtualBox to Azure VM via VHD extraction & Blob Storage upload, contributing to a $250K deal & 30% market expansion.</li>
               <li>Worked in a team of 4 to deliver a Cisco solution, leading to a 20% expansion in the Groupon account portfolio.</li>
+              <li>Expanded sales experience with weekly technical role plays, group presentations, networking.</li>
             </ul>
           </div>
         </section>
@@ -311,10 +315,20 @@
           </div>
 
           <div class="project-card">
-            <div class="entry-title">AWS Hosted Website</div>
+            <div class="entry-title">AWS Hosted Website (Live: <a href="https://agz-cloud.com/" target="_blank">agz-cloud.com</a>, Github Repo: <a href="https://github.com/agz-16/cloud-resume" target="_blank">here</a>)</div>
             <ul class="bullet-list body-text">
               <li>Coded and launched a static website using Amazon S3, CloudFront, Route53, and AWS Certificate Manager over HTTPS with a custom domain.</li>
-              <li>Created a page view counter using AWS Lambda, DynamoDB, and API Gateway, and deployed infrastructure as code using Terraform.</li>
+              <li>Built a serverless visitor counter using Lambda (Python), DynamoDB, API Gateway, & deployed IaC with Terraform.</li>
+              <li>Automated deployments via GitHub Actions CI/CD to sync S3 & invalidate CloudFront cache on every push.</li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <div class="entry-title">QRDeploy (Github Repo: <a href="https://github.com/agz-16/deploy-qr-code" target="_blank">here</a>)</div>
+            <ul class="bullet-list body-text">
+              <li>Developed full-stack QR code generator with FastAPI & Next.js, containerized & orchestrated via Docker.</li>
+              <li>Provisioned a custom VPC, public/private subnets, NAT gateway, & EKS Kubernetes cluster via Terraform.</li>
+              <li>Automated image builds & pushes to Docker Hub via GitHub Actions CI/CD pipeline on every push.</li>
+              <li>Extended CI/CD to automate EKS deployments via kubectl, authenticating with AWS IAM & applying K8s manifests.</li>
             </ul>
           </div>
 
